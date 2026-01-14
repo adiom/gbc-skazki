@@ -138,6 +138,7 @@ ReadJoypad:
     ld [rP1], a
     ld a, [rP1]
     ld a, [rP1]
+    cpl
     and $0F
     ld b, a
 
@@ -145,10 +146,10 @@ ReadJoypad:
     ld [rP1], a
     ld a, [rP1]
     ld a, [rP1]
+    cpl
     and $0F
     swap a
     or b
-    cpl
     ld [Joypad], a
 
     ld a, $30
